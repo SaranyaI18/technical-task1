@@ -32,9 +32,16 @@ class main extends Component{
         const {movie} = this.state;
       return(
         <div className='container'>
-      
-  
             <div>
+
+              <input 
+                type='text'
+                placeholder='search'
+                onChange={event=>{
+                  this.setState(event.target.value)
+                }}
+              
+              />
                 
                 {movie.filter(val=>{
                      if (movie == ""){
